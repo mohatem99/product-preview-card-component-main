@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.container{
+    margin: 50px auto;
+    max-width: 600px;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img-con >img{
+    max-width: 100%;
+    display: inherit;
+
+}
+.content{
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+h2{
+    
+   
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color:  hsl(228, 12%, 48%);
+    font-weight: 500;
+    font-size: 14px;
+    
+}
+h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 95%;
+    
+    
+}
+.description{
+    color:hsl(228, 12%, 48%); 
+    
+    font-size: 14px;
+
+
+
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+   
+}
+.price>.sale{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color:hsl(158, 36%, 37%);
+    font-size: 40px;
+}
+.price>.original{
+    text-decoration: line-through;
+    color:hsl(228, 12%, 48%); 
+    text-align: center;
+    padding: 10px;
+    margin-left: 15px;
+   
+}
+
+.btn{
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+   
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 15px 0;
+    
+}
+button>img{
+    padding-right: 5px;
+}
+
+
+@media (max-width:628px) {
+    .container{
+        border-radius: 45px;
+        margin: 20px auto;
+        padding: 0 15px;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        
+    }
+    .img-con >img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .content{
+        display: block;
+    }
+    .description,h2,h3,.price,.btn{
+        padding-bottom: 20px;
+    }
+      
+}
+
+@media(max-width: 375px){
+
+    .container{
+        margin: 20px auto;
+        margin: 0 10px;
+
+    }
+
+    .img-con >img{
+        max-height: 250px;
+    }
+    .content{
+        padding: 20px;
+    } 
+    .description{
+        padding-bottom: 16px;
+        font-size:  11px;
+        margin-bottom: 15px;
+    }
+    .price>.sale{
+        font-size:25px ;
+    }
+    
+    .btn{
+        padding: 12px;
+    }
+
+    .h3{
+        font-size: 25px;
+}
+}
+
